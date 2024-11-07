@@ -1,3 +1,4 @@
+// 387. First Unique Character in a String
 package string
 
 func firstUniqChar(s string) int {

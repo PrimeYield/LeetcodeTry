@@ -2,7 +2,6 @@
 
 package array
 
-/*
 func numberOfEmployeesWhoMetTarget(hours []int, target int) int {
 	var count int
 	for i := 0; i < len(hours); i++ {
@@ -11,9 +10,4 @@ func numberOfEmployeesWhoMetTarget(hours []int, target int) int {
 		}
 	}
 	return count
-}
-*/
-
-func numberOfEmployeesWhoMetTarget(hours []int, target int) int {
-
 }
