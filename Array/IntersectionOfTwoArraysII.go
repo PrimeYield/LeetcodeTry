@@ -1,6 +1,6 @@
+// 350. Intersection of Two Arrays II
 package array
 
-/*
 func intersect(nums1 []int, nums2 []int) []int {
 	countMapNums1 := make(map[int]int)
 	countMapNums2 := make(map[int]int)
@@ -26,8 +26,4 @@ func intersect(nums1 []int, nums2 []int) []int {
 		}
 	}
 	return res
-}
-*/
-func intersect(nums1 []int, nums2 []int) []int {
-
 }
