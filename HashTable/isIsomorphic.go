@@ -1,4 +1,7 @@
+// 205. Isomorphic Strings
 package hashtable
+
+import "fmt"
 
 func isIsomorphic(s string, t string) bool {
 	if len(s) != len(t) {
