@@ -1,5 +1,6 @@
 package string
 
+//14. Longest Common Prefix
 func longestCommonPrefix(strs []string) string {
 	var res string
 	var runMin, strStart int
