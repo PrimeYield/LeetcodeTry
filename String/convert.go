@@ -1,3 +1,4 @@
+// 6. Zigzag Conversion
 package string
 
 func convert(s string, numRows int) string {
