@@ -1,5 +1,7 @@
 package array
 
+import "sort"
+
 /*
 func containsDuplicate(nums []int) bool {
 	countMap := make(map[int]int)
@@ -15,5 +17,5 @@ func containsDuplicate(nums []int) bool {
 */
 
 func containsDuplicate(nums []int) bool {
-
+	sort.Ints(nums)
 }
