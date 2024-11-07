@@ -1,3 +1,5 @@
+//3110. Score of a String
+
 package string
 
 func scoreOfString(s string) int {
