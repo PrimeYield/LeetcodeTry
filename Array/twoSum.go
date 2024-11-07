@@ -1,5 +1,6 @@
 package array
 
+//1.Two Sum
 func twoSum(nums []int, target int) []int {
 	var res []int
 	numMap := make(map[int]int)
