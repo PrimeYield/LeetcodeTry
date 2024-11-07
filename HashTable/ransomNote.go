@@ -1,3 +1,4 @@
+// 383. Ransom Note
 package hashtable
 
 func canConstruct(ransomNote string, magazine string) bool {
