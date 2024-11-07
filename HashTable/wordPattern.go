@@ -1,3 +1,4 @@
+// 290. Word Pattern
 package hashtable
 
 func wordPattern(pattern string, s string) bool {
