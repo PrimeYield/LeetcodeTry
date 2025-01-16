@@ -37,3 +37,6 @@ func nextPermutation(nums []int) {
 	sort.Ints(nums[j+1:])
 
 }
+
+//Runtime 0ms Beats 100.00%
+//Memory 4.29 MB Beats 71.11%
