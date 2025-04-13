@@ -251,36 +251,32 @@ func deleteDuplicates(head *ListNode) *ListNode {
 //Output
 //[101]
 //為什麼會污染？？
+因為指在同一個記憶體位址
+
 */
+//不要動原始資料
 
 func deleteDuplicates(head *ListNode) *ListNode {
-	store := make([]int, 201, 201)
-	clone := head
-	for clone != nil {
-		if clone.Val < 0 {
-			store[-clone.Val+100]++
-		}
-		store[clone.Val]++
-		clone = clone.Next
+	count := make(map[int]int)
+	stay := &ListNode{Val: 0}
+	stay.Next = head
+	stay = stay.Next
+	for stay != nil {
+		count[stay.Val]++
+		stay = stay.Next
 	}
-	//clone指在nil
-	clone = &ListNode{Val: 0}
 	res := &ListNode{Val: 0}
+	res_cur := res
 	for head != nil {
-		if store[head.Val] == 1 {
-			if clone.Val > 100 {
-				clone.Val = -clone.Val + 100
-			}
-			clone.Next = head
-			clone = clone.Next
-			if res.Next == nil {
-				res.Next = clone
-			}
-		}
-		if store[head.Val] > 1 {
-			clone.Next = head.Next
+		if count[head.Val] == 1 {
+			res_cur.Next = head
+			res_cur = res_cur.Next
 		}
 		head = head.Next
 	}
+	res_cur.Next = nil
 	return res.Next
 }
+
+//Runtime 2ms Beats 7.14%
+//Memory 5.50MB Beats 6.12%
