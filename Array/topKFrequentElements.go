@@ -58,3 +58,7 @@ func topKFrequent(nums []int, k int) []int {
 
 //Runtime 30ms Beats 5.37%
 //Memory 8.29MB Beats 18.15%
+
+//去除 fmt.Println後
+//Runtime 1ms Beats 73.42%
+//Memory 8.12MB Beats 29.81%
