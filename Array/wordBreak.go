@@ -16,14 +16,7 @@ func wordBreak(s string, wordDict []string) bool {
 			}
 		}
 	}
-	for i, j := len(s)-1, len(s)-1; j >= 0; j-- {
-		if ok, _ := wordMap[s[j:i+1]]; ok {
-			i = j - 1
-			if i <= 0 {
-				return true
-			}
-		}
-	}
+
 	return false
 }
 
