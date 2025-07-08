@@ -3,10 +3,22 @@
 package linkedList
 
 func swapPairs(head *ListNode) *ListNode {
-	// nil
-	// nil -> 1 -> 0 -> 3 -> 2 -> 5 -> 4 .....
-	dummy := &ListNode{Next: head, Val: 0}
-	for dummy != nil {
-
+	dummy := head
+	res := &ListNode{}
+	curr := res
+	for dummy != nil && dummy.Next != nil {
+		tempNext := &ListNode{Val: dummy.Val}
+		temp := &ListNode{Val: dummy.Next.Val}
+		temp.Next = tempNext
+		curr.Next = temp
+		curr = curr.Next.Next
+		dummy = dummy.Next.Next
 	}
+	if dummy != nil {
+		curr.Next = dummy
+	}
+	return res.Next
 }
+
+//0ms
+//Memory 3.96% Beats 87.43%
