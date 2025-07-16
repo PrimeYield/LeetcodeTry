@@ -5,7 +5,7 @@ package monotonicstack
 func dailyTemperatures(temperatures []int) []int {
 	var stack []int
 	ans := make([]int, len(temperatures), len(temperatures))
-	for i := 0; i < len(temperatures); i++ {
+	for i := 0; i < len(temperatures)-1; i++ {
 		if len(stack) == 0 {
 			stack = append(stack, i)
 			continue
